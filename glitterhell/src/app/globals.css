@@ -31,3 +31,26 @@ body {
     text-wrap: balance;
   }
 }
+
+.timeline-container {
+  position: relative;
+  padding-left: 20px;
+  border-left: 2px solid #ddd;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #555;
+}
+
+.timeline-content {
+  margin-left: 20px;
+}
