@@ -1,0 +1,74 @@
+.timelineContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 10px;
+    background: #f4f4f4;
+    border: 1px solid #999;
+    border-radius: 8px;
+    font-family: 'Staatliches', Arial, sans-serif;
+    color: #333; /* Improved readability */
+}
+
+.timelineItem {
+    display: flex;
+    position: relative;
+    margin: 10px 0;
+}
+
+.timelineDot {
+    width: 20px;
+    height: 20px;
+    background: #444;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: absolute;
+    left: -10px;
+    top: 10px;
+}
+
+.timelineContent {
+    padding: 10px;
+    background: #fff5e6; /* Light background for better readability */
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    width: 100%;
+    color: #444; /* Improved readability */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.timelineContent h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.timelineContent p {
+    margin: 0;
+}
+
+/* Faction colors */
+.StrahlDemocraticRepublic {
+    border-left: 5px solid olive;
+}
+
+.MercenaryTroops {
+    border-left: 5px solid darkred;
+}
+
+/* Highlighted events */
+.highlight {
+    background: #ffe4b2;
+    border-left: 5px solid orange;
+}
+
+/* Retro-futuristic industrial design elements */
+.timelineItem::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -10px;
+    width: 5px;
+    background: linear-gradient(to bottom, #444, #888);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
