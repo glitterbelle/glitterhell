@@ -6,6 +6,11 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --primary-color: 107, 142, 35; /* Olive Drab */
+  --accent-color: 255, 69, 0; /* Red-Orange */
+  --secondary-color: 169, 169, 169; /* Dark Gray */
+  --warning-color: 255, 165, 0; /* Orange */
+  --highlight-color: 255, 0, 0; /* Bright Red */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,18 +29,46 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: rgb(var(--background-start-rgb));
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+a {
+  color: rgb(var(--primary-color));
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: rgb(var(--accent-color));
+}
+
+button {
+  background-color: rgb(var(--secondary-color));
+  color: rgb(var(--foreground-rgb));
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(var(--accent-color));
 }
 
 .timeline-container {
   position: relative;
   padding-left: 20px;
-  border-left: 2px solid #ddd;
+  border-left: 2px solid rgb(var(--secondary-color));
+  font-family: 'Courier New', Courier, monospace; /* Technical/industrial feel */
 }
 
 .timeline-item {
@@ -48,9 +81,50 @@ body {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #555;
+  background-color: rgb(var(--secondary-color));
 }
 
 .timeline-content {
   margin-left: 20px;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .bg-weathered {
+    background: url('/path/to/weathered-texture.png') repeat;
+  }
+  .border-rivets {
+    border: 2px solid rgb(var(--secondary-color));
+    border-radius: 4px;
+    padding: 10px;
+    position: relative;
+  }
+  .border-rivets::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    width: 12px;
+    height: 12px;
+    background-color: rgb(var(--secondary-color));
+    border-radius: 50%;
+  }
+  .text-stenciled {
+    font-family: 'Stenciled', sans-serif;
+  }
+  .highlight-event {
+    color: rgb(var(--highlight-color));
+    font-weight: bold;
+  }
+  .faction-color-1 {
+    color: rgb(var(--primary-color));
+  }
+  .faction-color-2 {
+    color: rgb(var(--accent-color));
+  }
+  .faction-color-3 {
+    color: rgb(var(--warning-color));
+  }
 }
