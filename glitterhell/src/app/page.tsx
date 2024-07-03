@@ -36,7 +36,7 @@ export default function Home() {
           src="/maschinen_krieger_logo.png"
           alt="Maschinen Krieger Logo"
           width={180}
-          height={37}
+          height={180}
           priority
         />
       </div>
