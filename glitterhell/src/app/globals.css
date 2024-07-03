@@ -1,130 +1,203 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  --primary-color: 107, 142, 35; /* Olive Drab */
-  --accent-color: 255, 69, 0; /* Red-Orange */
-  --secondary-color: 169, 169, 169; /* Dark Gray */
-  --warning-color: 255, 165, 0; /* Orange */
-  --highlight-color: 255, 0, 0; /* Bright Red */
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+/* styles/globals.css */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  background-color: rgb(var(--background-start-rgb));
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
-  margin-bottom: 20px;
+  font-family: 'Staatliches', Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  color: #333;
 }
 
 a {
-  color: rgb(var(--primary-color));
+  color: inherit;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
-a:hover {
-  color: rgb(var(--accent-color));
+* {
+  box-sizing: border-box;
 }
 
-button {
-  background-color: rgb(var(--secondary-color));
-  color: rgb(var(--foreground-rgb));
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 24px;
+  background: #e0e0e0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
-button:hover {
-  background-color: rgb(var(--accent-color));
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 5xl;
+  text-align: center;
+  font-family: 'Staatliches', Arial, sans-serif;
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
-.timeline-container {
+.editText {
+  margin: 0;
+  padding: 16px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+}
+
+.code {
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background: #f9f9f9;
+}
+
+.vercelLink {
+  display: flex;
+  align-items: center;
+}
+
+.vercelLogo {
+  margin-left: 8px;
+}
+
+.logoWrapper {
   position: relative;
-  padding-left: 20px;
-  border-left: 2px solid rgb(var(--secondary-color));
-  font-family: 'Courier New', Courier, monospace; /* Technical/industrial feel */
+  margin: 40px 0;
 }
 
-.timeline-item {
-  margin-bottom: 20px;
+.mainLogo {
+  position: relative;
+  z-index: 1;
 }
 
-.timeline-dot {
+/* Timeline styles */
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 10px;
+  background: #e0e0e0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Staatliches', Arial, sans-serif;
+}
+
+.event {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  transition: background 0.3s;
+  position: relative;
+}
+
+.event:hover {
+  background: #f9f9f9;
+}
+
+.date {
+  width: 20%;
+  font-weight: bold;
+  color: #555;
+}
+
+.details {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.eventName {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.location {
+  font-size: 0.9em;
+  color: #777;
+}
+
+/* Faction colors */
+.StrahlDemocraticRepublic {
+  border-left: 5px solid olive;
+}
+
+.MercenaryTroops {
+  border-left: 5px solid darkred;
+}
+
+/* Highlighted events */
+.highlight {
+  background: #ffe4b2;
+  border-left: 5px solid orange;
+}
+
+/* Retro-futuristic industrial design elements */
+.event::before {
+  content: '';
   position: absolute;
-  left: -6px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: rgb(var(--secondary-color));
+  top: 0;
+  bottom: 0;
+  left: -10px;
+  width: 5px;
+  background: linear-gradient(to bottom, #333, #777);
 }
 
-.timeline-content {
-  margin-left: 20px;
+.grid {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 32px;
+  text-align: center;
+  max-width: 5xl;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-  .bg-weathered {
-    background: url('/path/to/weathered-texture.png') repeat;
-  }
-  .border-rivets {
-    border: 2px solid rgb(var(--secondary-color));
-    border-radius: 4px;
-    padding: 10px;
-    position: relative;
-  }
-  .border-rivets::before {
-    content: '';
-    position: absolute;
-    top: -6px;
-    left: -6px;
-    width: 12px;
-    height: 12px;
-    background-color: rgb(var(--secondary-color));
-    border-radius: 50%;
-  }
-  .text-stenciled {
-    font-family: 'Stenciled', sans-serif;
-  }
-  .highlight-event {
-    color: rgb(var(--highlight-color));
-    font-weight: bold;
-  }
-  .faction-color-1 {
-    color: rgb(var(--primary-color));
-  }
-  .faction-color-2 {
-    color: rgb(var(--accent-color));
-  }
-  .faction-color-3 {
-    color: rgb(var(--warning-color));
-  }
+.card {
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.card:hover {
+  border-color: #ddd;
+  background-color: #f9f9f9;
+}
+
+.cardTitle {
+  margin: 0 0 8px;
+  font-size: 2xl;
+  font-weight: bold;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.card:hover .arrow {
+  transform: translateX(5px);
+}
+
+.cardDescription {
+  margin: 0;
+  opacity: 0.7;
+  max-width: 30ch;
 }
