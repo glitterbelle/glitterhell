@@ -1,11 +1,12 @@
 .timelineContainer {
+    max-width: 800px; /* Set a maximum width for wide screens */
+
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    margin: 20px auto;
     padding: 10px;
     background: #f4f4f4;
-    border: 1px solid #999;
-    border-radius: 8px;
+    border: 10px solid #999;
     font-family: 'Staatliches', Arial, sans-serif;
     color: #333; /* Improved readability */
 }
@@ -61,14 +62,3 @@
     border-left: 5px solid orange;
 }
 
-/* Retro-futuristic industrial design elements */
-.timelineItem::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -10px;
-    width: 5px;
-    background: linear-gradient(to bottom, #444, #888);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
-}

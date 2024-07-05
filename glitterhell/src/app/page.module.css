@@ -12,21 +12,7 @@
     color: #333; /* Improved readability */
 }
 
-.header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 5xl;
-    text-align: center;
-    background-color: #d0d0d0;
-    border: 1px solid #888;
-    border-radius: 8px;
-    padding: 16px;
-    font-family: 'Staatliches', Arial, sans-serif;
-    color: #222; /* Improved readability */
-}
+
 
 .editText {
     margin: 0;

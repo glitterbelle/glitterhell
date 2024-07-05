@@ -1,7 +1,7 @@
 .header {
   background-color: #333; /* Dark background */
   color: #fff; /* White text color */
-  padding: 20px 0; /* Padding around the header */
+  padding: 20px 20px; /* Padding around the header */
   text-align: center; /* Center the text */
 }
 
@@ -26,7 +26,8 @@
 }
 
 .navLinkText:hover {
-  text-decoration: underline; /* Underline on hover */
+  text-decoration: bold; /* Bold on hover */
+  color: #ff7e4f; /* Burnt orange text color */
 }
 
 /* Media query for smaller screens */

@@ -13,18 +13,18 @@ const Header = () => {
             </Link>
           </li>
           <li className={styles.navLinkItem}>
-            <Link href="../pages/factions">
+            <Link href="/factions">
               <span className={styles.navLinkText}>Factions</span>
-            </Link>
-          </li>
-          <li className={styles.navLinkItem}>
-            <Link href="/series">
-              <span className={styles.navLinkText}>Series</span>
             </Link>
           </li>
           <li className={styles.navLinkItem}>
             <Link href="/machines">
               <span className={styles.navLinkText}>Machines</span>
+            </Link>
+          </li>
+          <li className={styles.navLinkItem}>
+            <Link href="/series">
+              <span className={styles.navLinkText}>Series</span>
             </Link>
           </li>
           {/* Add more navigation links as needed */}
