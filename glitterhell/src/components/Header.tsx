@@ -8,6 +8,11 @@ const Header = () => {
       <nav>
         <ul className={styles.navLinks}>
           <li className={styles.navLinkItem}>
+            <Link href="/">
+              <span className={styles.navLinkText}>Home</span>
+            </Link>
+          </li>
+          <li className={styles.navLinkItem}>
             <Link href="/timeline">
               <span className={styles.navLinkText}>Timeline</span>
             </Link>

@@ -1,6 +1,5 @@
 .timelineContainer {
     max-width: 800px; /* Set a maximum width for wide screens */
-
     display: flex;
     flex-direction: column;
     margin: 20px auto;
