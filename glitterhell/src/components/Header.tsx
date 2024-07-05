@@ -8,13 +8,24 @@ const Header = () => {
       <nav>
         <ul className={styles.navLinks}>
           <li className={styles.navLinkItem}>
-            <Link href="/factions"><a className={styles.navLinkText}>Factions</a></Link>
+            <Link href="/timeline">
+              <span className={styles.navLinkText}>Timeline</span>
+            </Link>
           </li>
           <li className={styles.navLinkItem}>
-            <Link href="/series"><a className={styles.navLinkText}>Series</a></Link>
+            <Link href="../pages/factions">
+              <span className={styles.navLinkText}>Factions</span>
+            </Link>
           </li>
           <li className={styles.navLinkItem}>
-            <Link href="/machines"><a className={styles.navLinkText}>Machines</a></Link>
+            <Link href="/series">
+              <span className={styles.navLinkText}>Series</span>
+            </Link>
+          </li>
+          <li className={styles.navLinkItem}>
+            <Link href="/machines">
+              <span className={styles.navLinkText}>Machines</span>
+            </Link>
           </li>
           {/* Add more navigation links as needed */}
         </ul>

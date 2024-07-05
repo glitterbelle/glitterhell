@@ -1,27 +1,42 @@
 .header {
-    background-color: #333; /* Dark background */
-    color: #fff; /* White text color */
-    padding: 20px 0; /* Padding around the header */
-    text-align: center; /* Center the text */
-  }
-  
+  background-color: #333; /* Dark background */
+  color: #fff; /* White text color */
+  padding: 20px 0; /* Padding around the header */
+  text-align: center; /* Center the text */
+}
+
+.navLinks {
+  display: flex;
+  flex-wrap: wrap; /* Allow the items to wrap */
+  justify-content: center; /* Center the navigation links */
+  padding: 0;
+  list-style: none; /* Remove default list styling */
+  max-width: 100%; /* Ensure it doesn't exceed the width of the container */
+}
+
+.navLinkItem {
+  margin: 0 15px; /* Spacing between links */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.navLinkText {
+  color: #fff; /* White text color */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 18px; /* Increase font size */
+}
+
+.navLinkText:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
   .navLinks {
-    display: flex;
-    justify-content: center; /* Center the navigation links */
-    padding: 0;
-    list-style: none; /* Remove default list styling */
+      flex-direction: column; /* Stack links vertically */
+      align-items: center; /* Center align the items */
   }
-  
+
   .navLinkItem {
-    margin: 0 15px; /* Spacing between links */
+      margin: 10px 0; /* Adjust spacing for vertical layout */
   }
-  
-  .navLinkText {
-    color: #fff; /* White text color */
-    text-decoration: none; /* Remove underline from links */
-    font-size: 18px; /* Increase font size */
-  }
-  
-  .navLinkText:hover {
-    text-decoration: underline; /* Underline on hover */
-  }
+}

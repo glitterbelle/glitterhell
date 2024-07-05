@@ -1,34 +1,13 @@
 import Image from "next/image";
 import Timeline from "../components/Timeline"; // Assuming the 'timeline' component is located in the '../components' directory
+import Header from "../components/Header"; 
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.header}>
-        <p className={styles.editText}>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div className={styles.logoContainer}>
-          <a
-            className={styles.vercelLink}
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+  
+      <Header />
 
       <div className={styles.logoWrapper}>
         <Image
@@ -40,6 +19,7 @@ export default function Home() {
           priority
         />
       </div>
+
 
       <Timeline />
 
